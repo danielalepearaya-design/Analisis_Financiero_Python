@@ -669,10 +669,14 @@ Subo el Icono que cree para al APP
 """
 
 ventana = tk.Tk()
-ventana.iconbitmap(r"C:\Users\secre\.spyder-py3\Finanzas_phyton\INFORME FINAL - DANIELA LEPE\icon_DL.ico")
+try:
+    ventana.iconbitmap("icon_DL.ico")
+except tk.TclError:
+    pass
 
 ventana.title(
     "Análisis Financiero - Daniela Lepe")
+
 ventana.geometry("1250x850")
 ventana.minsize(1000, 700)
 
